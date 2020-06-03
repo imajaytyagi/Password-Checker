@@ -1,0 +1,17 @@
+# Hashing a password is a must 
+
+url = 'https://api.pwnedpasswords.com/range/' + 'CBFDA'
+
+# this api uses a technique called K Anonymity,
+# K anonymity allows somebody to receive information about us
+# yet still not know who we are
+# we only give 1st five character of our hashed password
+# it has a list of all the passwords that have been leaked however all these passwords are hashed with SHA1 algorithm
+# it looks in its database of all these password and pick all the hashed passwords that have the 1st five characters that match this
+# this way with a response we're gonna get all the passwords that are hashed that have this 
+# so that on our end when we receive the response we can check the rest of the hash function 
+# this way this api is never gonna know our full hash and therefore never ever be able to guess our password
+
+
+# <Response 400> usually means somethings not right with the api
+# <Response 200> means ok 
